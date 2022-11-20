@@ -12,5 +12,4 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           # https://github.com/cypress-io/github-action#component-tests
-          install: false
           component: true
