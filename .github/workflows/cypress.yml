@@ -1,0 +1,15 @@
+name: Cypress
+
+on:
+  workflow_dispatch:
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
+        with:
+          # https://github.com/cypress-io/github-action#component-tests
+          component: true
