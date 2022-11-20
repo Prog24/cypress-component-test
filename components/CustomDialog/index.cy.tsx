@@ -18,6 +18,7 @@ describe('<CustomDialog>', () => {
   it('mounts', () => {
     cy.mount(<CheckDialog />)
     cy.findByTestId('title').should('have.text', 'ダイアログタイトル')
+    cy.findByTestId('title').should('have.css', 'color', 'rgb(25, 118, 210)')
     cy.findByTestId('submit').click()
   })
 })
