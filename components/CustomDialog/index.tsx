@@ -1,4 +1,5 @@
 import { Button, Dialog, DialogTitle, DialogContent, DialogActions } from '@mui/material'
+import { styled } from '@mui/material/styles'
 
 type CustomDialogProps = {
   open: boolean
@@ -7,11 +8,15 @@ type CustomDialogProps = {
   title: string
 }
 
+const StyledDialogTitle = styled(DialogTitle)(({ theme }) => ({
+  color: theme.palette.primary.main
+}))
+
 const CustomDialog = (props: CustomDialogProps) => {
   const { open, onSubmit, onClose, title } = props
   return (
     <Dialog open={open} onClose={onClose}>
-      <DialogTitle data-test-id='title'>{title}</DialogTitle>
+      <StyledDialogTitle data-test-id='title'>{title}</StyledDialogTitle>
       <DialogContent data-test-id='content'>
         Hogehoge
       </DialogContent>
