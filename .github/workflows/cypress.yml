@@ -11,4 +11,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
-          browser: chrome
+          # https://github.com/cypress-io/github-action#component-tests
+          install: false
+          component: true
