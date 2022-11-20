@@ -1,5 +1,3 @@
-# https://docs.cypress.io/guides/continuous-integration/github-actions#Testing-in-Chrome-and-Firefox-with-Cypress-Docker-Images
-# container: https://github.com/cypress-io/cypress-docker-images/tree/master/browsers
 name: Cypress
 
 on:
@@ -8,14 +6,8 @@ on:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    container:
-      # https://github.com/cypress-io/cypress/issues/19981
-      image: cypress/browsers:node16.17.0-chrome106
-      options: --user 1001
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      
+      - uses: actions/checkout@v2
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
