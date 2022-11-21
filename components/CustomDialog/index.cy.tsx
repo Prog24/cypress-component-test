@@ -27,8 +27,10 @@ const CheckDialog = () => {
 describe('<CustomDialog>', () => {
   it('mounts', () => {
     cy.mount(<CheckDialog />)
+    cy.findByTestId('dialog').should('have.length.at.least', 1)
     cy.findByTestId('title').should('have.text', 'ダイアログタイトル')
     cy.findByTestId('title').should('have.css', 'color', `${hex2rgb(blue[700])}`)
-    cy.findByTestId('submit').click()
+    cy.findByTestId('cancel').click()
+    cy.findByTestId('dialog').should('have.length', 0)
   })
 })

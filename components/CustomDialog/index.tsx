@@ -15,7 +15,7 @@ const StyledDialogTitle = styled(DialogTitle)(({ theme }) => ({
 const CustomDialog = (props: CustomDialogProps) => {
   const { open, onSubmit, onClose, title } = props
   return (
-    <Dialog open={open} onClose={onClose}>
+    <Dialog data-test-id='dialog' open={open} onClose={onClose}>
       <StyledDialogTitle data-test-id='title'>{title}</StyledDialogTitle>
       <DialogContent data-test-id='content'>
         Hogehoge
