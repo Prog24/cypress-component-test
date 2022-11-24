@@ -25,6 +25,9 @@ const CheckDialog = () => {
 }
 
 describe('<CustomDialog>', () => {
+  beforeEach(() => {
+    cy.viewport(500, 500)
+  })
   it('mounts', () => {
     cy.mount(<CheckDialog />)
     cy.matchImageSnapshot('CustomDialog')
