@@ -16,6 +16,7 @@ jobs:
         with:
           # https://github.com/cypress-io/github-action#component-tests
           component: true
+          browser: chrome
       - name: Upload screenshots
         uses: actions/upload-artifact@v3
         if: failure()
