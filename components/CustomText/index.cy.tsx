@@ -1,9 +1,12 @@
 import CustomText from './index'
 
+const sampleText = ['テキスト', 'ほげ']
+
 describe('<CustomText>', () => {
-  it('mounts', () => {
-    cy.mount(<CustomText>テキスト</CustomText>)
-    cy.findByTestId('hoge-text').should('have.text', 'テキスト')
-    cy.findByTestId('hoge-text').should('have.css', 'color', 'rgb(25, 118, 210)')
+  sampleText.forEach((text) => {
+    it(`mounts ${text}`, () => {
+      cy.mount(<CustomText>{text}</CustomText>)
+      cy.findByTestId('hoge-text').should('have.text', text)
+    })
   })
 })
