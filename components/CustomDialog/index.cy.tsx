@@ -27,7 +27,6 @@ const CheckDialog = () => {
 describe('<CustomDialog>', () => {
   it('mounts', () => {
     cy.mount(<CheckDialog />)
-    cy.viewport(500, 500)
     cy.matchImageSnapshot('CustomDialog')
     cy.findByTestId('dialog').should('have.length.at.least', 1)
     cy.findByTestId('title').should('have.text', 'ダイアログタイトル')
