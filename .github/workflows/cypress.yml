@@ -15,7 +15,7 @@ jobs:
           # https://github.com/cypress-io/github-action#component-tests
           component: true
       - name: Upload screenshots
-        uses: actions/upload-artifact@latest
+        uses: actions/upload-artifact@v3
         if: failure()
         with:
           name: cypress-snapshots
