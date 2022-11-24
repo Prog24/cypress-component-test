@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Install Fonts
+        run: sudo apt install fonts-noto
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
