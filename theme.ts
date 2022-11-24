@@ -15,6 +15,6 @@ export default createTheme({
     }
   },
   typography: {
-    fontFamily: '"Noto Sans JP", "Helvetica", "Arial", sans-serif'
+    fontFamily: '"Noto Sans CJK JP", "Noto Sans JP", "Helvetica", "Arial", sans-serif'
   }
 })
